@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name Switch to src folder
+      - name Switch-to-folder
       - run: echo | ls -la
       - run: echo | ls -la src
       - run: cd src
@@ -39,7 +39,7 @@ jobs:
       - name Build step
       - run: npm install
       - run: npm run build
-      
+
       # - run: npm run build
       # - uses: actions/upload-artifact@v3
       #   with:
