@@ -29,14 +29,11 @@ jobs:
         with:
           node-version: '18.x'
 
-      - run: echo | ls -la
-      - run: echo | ls -la src
-        working-directory: ./src
-      - run: echo | ls -la
-      - run: echo | ls -la src
-        
-      - run: npm install
-      - run: npm run build
+      - name: Compiliation
+        working-directory: ./src        
+      - run: | 
+          npm install
+          run: npm run build
 
       # - run: npm run build
       # - uses: actions/upload-artifact@v3
