@@ -37,10 +37,18 @@ jobs:
         working-directory: ./src        
         run: npm run build
 
-      - run: ls -la
-      # - run: npm run build
-      # - uses: actions/upload-artifact@v3
-      #   with:
-      #     name: artifact
-      #     path: src
-      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+  # This a job called "deploy" 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+
