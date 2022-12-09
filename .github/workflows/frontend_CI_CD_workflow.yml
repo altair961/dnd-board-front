@@ -33,7 +33,7 @@ jobs:
         working-directory: ./src        
       - run: | 
           npm install
-          run: npm run build
+          npm run build
 
       # - run: npm run build
       # - uses: actions/upload-artifact@v3
