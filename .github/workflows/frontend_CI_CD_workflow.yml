@@ -29,14 +29,15 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Compiliation1
+      - name: install node modules
         working-directory: ./src        
         run: npm install
 
-      - name: Compiliation1
+      - name: compile
         working-directory: ./src        
         run: npm run build
 
+      - run: ls -la
       # - run: npm run build
       # - uses: actions/upload-artifact@v3
       #   with:
