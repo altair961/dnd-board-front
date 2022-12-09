@@ -29,7 +29,6 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name Switch-to-folder
       - run: echo | ls -la
       - run: echo | ls -la src
       - run: cd src
