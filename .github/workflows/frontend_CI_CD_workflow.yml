@@ -29,15 +29,15 @@ jobs:
         with:
           node-version: '18.x'
 
-      - run: echo | ls -la
-      - run: echo | ls -la src
-      - run: cd src
-      - run: echo | ls -la
-      - run: echo | ls -la src
+      # - run: echo | ls -la
+      # - run: echo | ls -la src
+      # - run: cd src
+      # - run: echo | ls -la
+      # - run: echo | ls -la src
  
-      - name Build step
-      - run: npm install
-      - run: npm run build
+      # - name Build step
+      - run: npm install /src
+      - run: npm run build /src
 
       # - run: npm run build
       # - uses: actions/upload-artifact@v3
